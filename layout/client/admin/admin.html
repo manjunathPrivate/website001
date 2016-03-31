@@ -1,0 +1,62 @@
+<template name="adminTemplate">
+	<nav class="top-nav">
+	</nav>
+	<div class="container">
+    <div class="row">
+        <div id="content" class="span10">
+					<a class="btn-floating btn-large waves-effect waves-light red addVideo"><i class="material-icons">add</i></a>
+					<table align="center">
+							 <thead>
+								 <tr>
+										 <th>Video Name</th>
+										 <th>Video ID</th>
+										 <th>Video URl</th>
+										 <th>desc</th>
+								 </tr>
+							 </thead>
+							 <tbody>
+								 {{#each video in videos}}
+								 <tr>
+									 <td>{{video.videoName}}</td>
+									 <td>{{video.videoId}}</td>
+									 <td><a href="{{video.videoUrl}}" target="_blank">click</a></td>
+									 <td>{{video.desc}}</td>
+									 <td> <i class="material-icons pointer delete" id="{{video._id}}">delete</i></td>
+								 </tr>
+								 {{/each}}
+							 </tbody>
+						 </table>
+						 {{#if showForm}}
+							 {{> formTemplate}}
+							{{/if}}
+        </div>
+    </div>
+</div>
+</template>
+
+<template name="formTemplate">
+	<br>
+	<br>
+	<br>
+	<form class="col s12">
+	<div class="row">
+		<div class="input-field col s2">
+			<input placeholder="Placeholder" name="videoName" type="text" class="validate">
+			<label for="first_name">Video Name</label>
+		</div>
+		<div class="input-field col s2">
+			<input  name="videoId" type="text" class="validate">
+			<label for="last_name">Video Id</label>
+		</div>
+		<div class="input-field col s2">
+			<input name="videoUrl" type="text" class="validate">
+			<label for="last_name">URl</label>
+		</div>
+		<div class="input-field col s2">
+		 <textarea name="desc" class="materialize-textarea"></textarea>
+			<label for="last_name">Details</label>
+		</div>
+		<a class="waves-effect waves-light btn saveVideo"><i class="material-icons left">cloud</i>publish video</a>
+	</div>
+	</form>
+</template>
