@@ -17,6 +17,15 @@ body {
     line-height: 30px;
 
 }
+.footdiv { position: relative; height: 20rem; background: rgba(0,0,0,0.4); }@include transition-effect(0.5s); }
+.footdiv .row{ height: 18rem; }
+.footdiv .address {position: absolute; top: 5rem; right: 1rem; padding: 1rem; background: rgba(0,0,0,0.2);}
+.footdiv:hover {background: rgba(0,0,0,0.6);}
+.footdiv:before {content: ""; background-image:url("/img/map.png"); background-size: cover; background-position: center right; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: -1;}
+.footdiv ul.footer-ul li { margin-top: 45px;}
+.footdiv ul.footer-ul li a { margin-top: 45px; padding: 2px 5px;}
+.footer-copyright {position:absolute; bottom:0; width:100%; background: rgba(0,0,0,0.3); line-height: 3rem; padding-left: 1rem;}
+
 
 
 h2 {
@@ -52,7 +61,8 @@ p {
      max-height:30px
 }
 #menu {
-    background-color:#4bb777;
+    /*background-color:#4bb777;*/
+    background:#5C4BB7;
     color:#fff;
     font-size:12px;
     font-weight:900;
@@ -116,8 +126,9 @@ background-size: cover;
 
 }
 .testi-sec .overlay{
-    background:rgba(8, 134, 74, 0.80);
-min-height: 300px;
+    /*background:rgba(8, 134, 74, 0.80);*/
+    background:#5C4BB7;
+    min-height: 300px;
 }
     .testi-sec h3 {
         color:#fff;
@@ -174,3 +185,128 @@ min-height: 300px;
 }
 
 .pointer, .link { cursor: pointer; }
+
+/* jssor slider arrow navigator skin 05 css */
+/*
+.jssora05l                  (normal)
+.jssora05r                  (normal)
+.jssora05l:hover            (normal mouseover)
+.jssora05r:hover            (normal mouseover)
+.jssora05l.jssora05ldn      (mousedown)
+.jssora05r.jssora05rdn      (mousedown)
+*/
+.jssora05l, .jssora05r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('img/a17.png') no-repeat;
+    overflow: hidden;
+}
+.jssora05l { background-position: -10px -40px; }
+.jssora05r { background-position: -70px -40px; }
+.jssora05l:hover { background-position: -130px -40px; }
+.jssora05r:hover { background-position: -190px -40px; }
+.jssora05l.jssora05ldn { background-position: -250px -40px; }
+.jssora05r.jssora05rdn { background-position: -310px -40px; }
+
+/* jssor slider thumbnail navigator skin 01 css */
+/*
+.jssort01 .p            (normal)
+.jssort01 .p:hover      (normal mouseover)
+.jssort01 .p.pav        (active)
+.jssort01 .p.pdn        (mousedown)
+*/
+.jssort01 .p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+}
+
+.jssort01 .t {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.jssort01 .w {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.jssort01 .c {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 68px;
+    height: 68px;
+    border: #000 2px solid;
+    box-sizing: content-box;
+    background: url('img/t01.png') -800px -800px no-repeat;
+    _background: none;
+}
+
+.jssort01 .pav .c {
+    top: 2px;
+    _top: 0px;
+    left: 2px;
+    _left: 0px;
+    width: 68px;
+    height: 68px;
+    border: #000 0px solid;
+    _border: #fff 2px solid;
+    background-position: 50% 50%;
+}
+
+.jssort01 .p:hover .c {
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    border: #fff 1px solid;
+    background-position: 50% 50%;
+}
+
+.jssort01 .p.pdn .c {
+    background-position: 50% 50%;
+    width: 68px;
+    height: 68px;
+    border: #000 2px solid;
+}
+
+* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
+    /* ie quirks mode adjust */
+    width : 72px;
+    height : 72px;
+}
+.hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    overflow: auto;
+    max-height: 20em;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    /*max-height: 100%;*/
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max width of all the scroll bars across
+     * the devices you are targeting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+}

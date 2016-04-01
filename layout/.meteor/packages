@@ -25,3 +25,4 @@ standard-minifier-css
 standard-minifier-js
 iron:router
 suxez:jquery-serialize-object
+dburles:google-maps

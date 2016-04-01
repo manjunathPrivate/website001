@@ -11,17 +11,18 @@
   ======================================*/
 
 /*=====================================
-  NAVBAR STYLES 
+  NAVBAR STYLES
     ===================================*/
 
 
 #menu {
-    background-color:#4bb777;
-   
+    /*background-color:#4bb777;*/
+    background:#5C4BB7;
+
 }
 
 /*=====================================
-  HEADERS STYLES 
+  HEADERS STYLES
     ===================================*/
 
 
@@ -30,16 +31,17 @@
 }
 
   /*=====================================
-  TESTIMONIALS STYLES 
+  TESTIMONIALS STYLES
     ===================================*/
 
 .testi-sec .overlay{
-    background:rgba(8, 134, 74, 0.80);
+    /*background:rgba(8, 134, 74, 0.80);*/
+    background:#5C4BB7;
 }
- 
+
 
 /*=====================================
-  PRICING STYLES 
+  PRICING STYLES
     ===================================*/
 
 .single-price {
@@ -49,7 +51,7 @@
     background-color:#4bb777;
 }
 /*=====================================
-  FOOTER STYLES 
+  FOOTER STYLES
     ===================================*/
 
  .myfooter {
