@@ -26,7 +26,14 @@
 			</div>
 			<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
 			<div class="col">
-				sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf
+				<div class="row">
+					comments({{video.comments.length}})
+				</div>
+				<ul class="">
+				{{#each comment in video.comments}}
+					<li>@{{comment.userName}} 	{{comment.message}}</li>
+				{{/each}}
+			</ul>
 			</div>
 			<div id="form-{{video.videoId}}" class="right" style="display:none">
     <form id="comment-form">

@@ -14,18 +14,16 @@ if (Meteor.isClient) {
 }
 Template.youtube.events({
   "click .addComment": function(evt){
-    	var target = $(evt.target);
-      $("#form-"+target.attr("id")).show();
+  	var target = $(evt.target);
+    $("#form-"+target.attr("id")).show();
   },
   "click .saveComment": function(evt){
-    	var target = $(evt.target);
-      console.log(target.attr("id"));
-      var frm = $("#comment-form").serializeObject();
-      console.log(frm);
-    var video =  Videos.findOne({videoId:target.attr("id") });
-    if(!video.comments) video.comments = [];
-    video.comments.push(frm);
-    video.save()
+  	var target = $(evt.target);
+    var frm = $("#comment-form").serializeObject();
+    var v =  Videos.findOne({videoId:target.attr("id") });
+    Videos.update({_id: v._id }, {$push:{comments: frm}});
+    // if(!video.comments) video.comments = [];
+    // video.comments.push(frm);
   }
 })
 Template.youtube.helpers({
