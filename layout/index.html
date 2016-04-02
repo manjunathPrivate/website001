@@ -2,149 +2,354 @@
   <title>Talks</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<template name="homeTemplate">
-   <div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
-          <div class="container">
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo180-50.png" alt=""  /></a>
-              </div>
-              <div class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                       <li><a href="#">FEATURES</a></li>
-                      <li><a href="#">DEVELOPERS</a></li>
-                       <li><a href="mailto:info@domain.com?Subject=Product%20Enquiry" target="_top"> <i class="fa fa-envelope-o"></i><span class="home-mail">e-mail: info@domain.com</span></a></li>
-                  </ul>
-              </div>
-
-          </div>
-      </div>
-        <!--NAVBAR SECTION END-->
-         <section class="header-sec" id="home" >
-
-               <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
-                   <!-- Loading Screen -->
-                   <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                       <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                       <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-                   </div>
-                   <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/01.jpg" />
-                           <img data-u="thumb" src="img/thumb-01.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/02.jpg" />
-                           <img data-u="thumb" src="img/thumb-02.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/03.jpg" />
-                           <img data-u="thumb" src="img/thumb-03.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/04.jpg" />
-                           <img data-u="thumb" src="img/thumb-04.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/05.jpg" />
-                           <img data-u="thumb" src="img/thumb-05.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/06.jpg" />
-                           <img data-u="thumb" src="img/thumb-06.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/07.jpg" />
-                           <img data-u="thumb" src="img/thumb-07.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/08.jpg" />
-                           <img data-u="thumb" src="img/thumb-08.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/09.jpg" />
-                           <img data-u="thumb" src="img/thumb-09.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/10.jpg" />
-                           <img data-u="thumb" src="img/thumb-10.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/11.jpg" />
-                           <img data-u="thumb" src="img/thumb-11.jpg" />
-                       </div>
-                       <div data-p="144.50" style="display: none;">
-                           <img data-u="image" src="img/12.jpg" />
-                           <img data-u="thumb" src="img/thumb-12.jpg" />
-                       </div>
-                       <a data-u="ad" href="http://www.jssor.com" style="display:none">Responsive Slider</a>
-
-                   </div>
-                   <!-- Thumbnail Navigator -->
-                   <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
-                       <!-- Thumbnail Item Skin Begin -->
-                       <div data-u="slides" style="cursor: default;">
-                           <div data-u="prototype" class="p">
-                               <div class="w">
-                                   <div data-u="thumbnailtemplate" class="t"></div>
-                               </div>
-                               <div class="c"></div>
-                           </div>
-                       </div>
-                       <!-- Thumbnail Item Skin End -->
-                   </div>
-                   <!-- Arrow Navigator -->
-                   <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
-                   <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
-               </div>
-
-         </section>
-         <!--HEADER SECTION END-->
-
-     <section class="features" id="features">
-       <div class="hide-scroll">
-     <div class="viewport">
+<template name="layoutTemplate">
+  <div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
          <div class="container">
-           Resent Events <i class="material-icons">event</i>
-           <div align="center">
-             {{> youtube}}
-           </div>
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo180-50.png" alt=""  /></a>
+             </div>
+             <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav navbar-right">
+                     <li><a href="/">Home</a></li>
+                     <li><a href="/#product">Product</a></li>
+                     <li><a href="/blog">Blog</a></li>
+                     <li><a href="/paricipate">Attendend/Paricipate</a></li>
+                     <li><a href="/aboutus">About us</a></li>
+                 </ul>
+             </div>
+
          </div>
      </div>
- </div>
-     </section>
-      <!--FEATURES SECTION END-->
-       <section class="testi-sec" >
-             <div class="overlay">
-   <div class="container">
-             <div class="row text-center" >
+</template>
 
-                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+<template name="blogTemplate">
+  {{>layoutTemplate}}
+  <div class="DY0BBXD-b-a"><div class="DY0BBXD-b-g" kind="click" style="top: 60px; width: 1351px;"> <div class="DY0BBXD-b-h"> <div class="DY0BBXD-b-i"> <h1 class="DY0BBXD-b-l"> <a title="Profile page" href="https://plus.google.com/104155972572887029987">  <span class="DY0BBXD-b-v"> <img alt="" src="//lh6.googleusercontent.com/-b5ydwBfa6fk/AAAAAAAAAAI/AAAAAAAAAB4/paK_ikipynA/s80-c/photo.jpg"> </span> </a> <a class="DY0BBXD-b-s" href="javascript:;" tabindex="-1" aria-hidden="true">Manju Kb's blogs</a>  <span title="safe: &quot;Manju Kb's blogs&quot;"></span> </h1> </div> <div class="DY0BBXD-b-j"> <div class="DY0BBXD-b-m"></div> <div class="DY0BBXD-b-n" kind="block"> <button class="blogg-button blogg-menu-button" aria-haspopup="true" tabindex="0" aria-label="User interface language. The current language is English (United Kingdom)."><span class="blogg-menu-button-content">English (United Kingdom)</span><span class="blogg-disclosureindicator"></span></button> <button class="blogg-button blogg-menu-button DY0BBXD-b-x" aria-haspopup="true" title="Blogger options" tabindex="0"><span class="blogg-menu-button-content"><img class="blogg-button-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAC30lEQVQ4ja1UTUiiURRtI9MirJ1JEJIlmBDaONCYRQvRoLKwf6yIyp8sI4ZgQFHaFC0iC2YrRITjYlathqAWMW1atdGBwTLNLm1apdau7vn4lCalmYERHu9779177r3nnmvF09NTxf9abz7KZDJpXV3deWNjI6nVauzSfwJjAHVtba0E38PDw00qlYosFgv19/fTyspKk2gjgd2bYHK5/HNDQwNpNJoIZ1Hp8/net7S00Pj4OM3NzVE4HNbyubK+vh7v1Nzc/KksGEcyKpVK6urqot7eXjKZTId6vf6X0WikqakpcjqdAI11dHQc6nQ6MpvN1NPTQwaDQVcClkwmP05MTFwAyO120/T0NI2OjpLdbieHw0Fer1cAHBsbK95vbGwkUqmUtlyZ7+7v77/Mzs4mAbSwsED8DYCbYDCYxI4z7hEMd/l8PgS/spytr69Xt7e3X42MjAhAm5ubiWw2e8JvYQ50srq6mpicnCSPx0OLi4tXe3t71SWcFdrPhFJbW5tA+Pz8fObu7m6b36tE46rb29ttq9V6g2Yg2ODgoGDPfudFMACBUHCByDD2+/2X/PZaV1KbzXYJO5TrcrkE+4GBASqCcUfS0BFAQDaXAF7SfX19Na80WKPVatPICJnBFmt5eTn9krMDXj8eHh5OZ2ZmrtE1GHMGEZaBtDANCoUCZ4GGpaWl68fHx1P4if6/N2Bra6uaDROFMlBCd3d3igG+8zhhJ86WOCAFAoHE/v5+aQPEyFD2Ny5D4A7tR9dQOs5DQ0NCRgAqyIb5+8r2khIw7ogJc8iZEItX0BE7ZQAGZ3HP4B5ACAThMvn6cjr7sLa29hNlsN4umL/dTCZzzMMuZAmi+XfMQt3lTl8gYCQSibOfuhwYlicWi53lcrkdKDsUCrWyiIXZBBhz1Ip7FvJOPB4/42/Hn/7PmgojEo1GlZ2dnWnmRmj/0dGRsjB6ot3f/zmK6j940f6qt+yfAdOYXbY4BoePAAAAAElFTkSuQmCC" alt="Blogger options"></span></button> </div> </div> </div> <div class="DY0BBXD-b-k"></div> </div> <div class="DY0BBXD-b-b"> <div><div class="DY0BBXD-v-a"><div class="DY0BBXD-v-c"> <div class="DY0BBXD-v-e" aria-hidden="true" role="list" aria-label="Notifications from Blogger" style="display: none;"></div> </div> <div class="DY0BBXD-v-c"> <div class="DY0BBXD-v-d" role="list" aria-label="Blogger promotions"><div class="DY0BBXD-B-c" role="listitem"><div><div class="gwt-HTML DY0BBXD-B-a"><b> Did you know? </b> <br> You can now highlight a selected post with the new Featured post gadget.
+      <a href="/go/featuredpostpromo" target="_blank">Learn more</a></div></div> <a class="DY0BBXD-R-a DY0BBXD-B-b" href="javascript:;" kind="close" role="button" tabindex="0" title="Dismiss this notification"><img alt="Dismiss this notification" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAABBklEQVQ4y+2UzwqCQBCH94GiS+Ah6A8EXXoQ74IKipqgEvQMvUd0rk6lHSSDgqJT7xC0/UbGS7eVqA4dPoYZxs/dnVUhpRTvRvyln5Hatk1sgG5ZlvA8T0RRVEbKUR+DOfWpSEkowR6S1ot0gPoZPKhPRaqDK4kh2UGmsXSI/MAvzKlPdftdcDRNU0KWJkkyQywoR30LNNXtl2BVPdd115BJROn7PsUF6lrVU0cqwjCcktQwjFIaBIHBw6onBSOsLCUpQVLHcZao9+tKR+DCZ7qM43iCmPGZ5pVYRUr38MbTX0HW5Ol3kGc8/RP1qUjn/OAGksbLPW2jXoA79X33i/r/+n5P+gR0TaBkFfIs6wAAAABJRU5ErkJggg=="></a></div></div> </div></div></div> <div class="DY0BBXD-b-c"> <div class="DY0BBXD-b-d"> <div class="DY0BBXD-b-t"> <button class="blogg-button DY0BBXD-b-u" tabindex="0">New Blog</button> <ul class="blogg-tabs" aria-hidden="true" style="display: none;"><li class="blogg-tab selected" kind="menu"><a class="blogg-tab-inner" href="javascript:void(0);">Your blogs (0)</a></li></ul>  </div> </div> </div> <div class="DY0BBXD-b-e"> <div class="DY0BBXD-b-f"> <div class="DY0BBXD-b-p"> <div class="DY0BBXD-M-e"><span class="DY0BBXD-M-a"></span><span class="DY0BBXD-M-b"></span> <div class="DY0BBXD-M-f"><div><h3 class="blogg-promo-title"> Create your blog now </h3> <div class="blogg-promo-desc"> You are not an author on any blogs yet, create one now to start posting! <a href="https://support.google.com/blogger/answer/87065" target="help"> Can't find your blog? </a> </div></div></div></div> <div class="DY0BBXD-b-q"> <div></div> <a class="DY0BBXD-b-B" href="javascript:;" aria-hidden="true" tabindex="0" style="display: none;"></a> </div> </div> </div> </div> <div style="clear:both;"></div> </div></div>
+  {{> footer}}
 
-                  <h3 data-scroll-reveal="enter from the bottom after 0.1s">
-                      <strong>
-                     What Our Clients Says
-                          </strong>
-                          </h3>
+</template>
 
-                     <h4 data-scroll-reveal="enter from the bottom after 0.8s">
-                 <i class="fa fa-quote-left "></i> Thanks for you help was able to find dream home/land as investment
-                           <i class="fa fa-quote-right "></i>
-                         <br />
-                         <span class="pull-right"><strong>-Manju</strong></span>
-                         </h4>
-                </div>
+<template name="paricipateform">
+  {{>layoutTemplate}}
+  <div class="container">
+      <form class="well form-horizontal"  id="contact_form">
+  <fieldset>
+
+  <!-- Form Name -->
+  <legend>Contact Us Today!</legend>
+
+
+  <!-- Text input-->
+<div class="formtemp">
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">First Name</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- Text input-->
+
+
+    <!-- Text input-->
+           <div class="form-group">
+      <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Text input-->
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input name="phone" placeholder="" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- Text input-->
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+      <input name="address" placeholder="Address" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- Text input-->
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">City</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+      <input name="city" placeholder="city" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">State</label>
+        <div class="col-md-4 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="state" class="form-control selectpicker" >
+          <option>Attend</option>
+          <option>Paricipate</option>
+        </select>
+      </div>
+    </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-warning shootEmail" >Send <span class="glyphicon glyphicon-send"></span></button>
+      </div>
+    </div>
+</div>
+    <div style="display:none" class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+  </fieldset>
+  </form>
+  </div>
+
+  {{> footer}}
+
+</template>
+<template name="aboutUs">
+  {{>layoutTemplate}}
+  <aside class="group">
+	<div class="big-title group">
+		<div class="left">HERE'S WHAT MAKES US</div> <div class="right"><span class="green">Good</span> &amp; <span class="pink">Special</span>:</div>
+	</div>
+
+	<div class="column">
+		<div class="content">
+			<img src="img/approach/approach_swat.png">
+			<p class="title">WE'RE A S.W.A.T. <br><b>Not an Army</b></p>
+			<p>There's no bloat here. We're a nimble crew that provides great value through every service we offer -- whether it's superior management, insightful strategy, impressive design or groundbreaking development. We blend big agency expertise with a small agency’s personal approach. The combination enables us to attract outstanding talent and produce award-winning work for the best brands around.</p>
+		</div>
+	</div>
+	<div class="column middle">
+		<div class="content">
+			<img src="img/approach/approach_thinking.png">
+			<p class="title">WE COMBINE STRATEGIC THINKING <b>with Design Insight</b></p>
+			<p>Sisu creates smart, beautiful digital and interactive experiences that reward - and even delight - both clients and users alike. We do so by bringing our knowledge of emerging trends and best practices to our clients and by understanding the value of strategy and planning -- all while preserving the creativity and integrity of a great idea. </p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="content">
+			<img src="img/approach/approach_fun.png">
+			<p class="title">WE DO GREAT WORK <b><br> &amp; Have Fun Doing It</b></p>
+			<p>We care. We collaborate. We're friendly. We celebrate curiosity. We like to tell a good story. We have each others' backs. We use all the tools at our disposal to craft a winning project. And from time to time we make sure to gather together and smell the digital roses. </p>
+		</div>
+	</div>
+</aside>
+  {{> footer}}
+
+</template>
+<template name="imageSlider">
+  <section class="header-sec" id="home" >
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+                <div data-p="144.50" style="display: none;">
+                  <div class="carousel-caption light">
+                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
                  </div>
-                  </div>
-             </div>
-         </section>
-         <!--TESTIMONIAL SECTION END-->
-       <!--CONTACT SECTION END-->
-      {{> footer}}
+                    <img data-u="image" src="img/01.jpg" />
+                    <img data-u="thumb" src="img/thumb-01.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/02.jpg" />
+                    <img data-u="thumb" src="img/thumb-02.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/03.jpg" />
+                    <img data-u="thumb" src="img/thumb-03.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/04.jpg" />
+                    <img data-u="thumb" src="img/thumb-04.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/05.jpg" />
+                    <img data-u="thumb" src="img/thumb-05.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/06.jpg" />
+                    <img data-u="thumb" src="img/thumb-06.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/07.jpg" />
+                    <img data-u="thumb" src="img/thumb-07.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/08.jpg" />
+                    <img data-u="thumb" src="img/thumb-08.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/09.jpg" />
+                    <img data-u="thumb" src="img/thumb-09.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/10.jpg" />
+                    <img data-u="thumb" src="img/thumb-10.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/11.jpg" />
+                    <img data-u="thumb" src="img/thumb-11.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/12.jpg" />
+                    <img data-u="thumb" src="img/thumb-12.jpg" />
+                </div>
+                <a data-u="ad" href="http://www.jssor.com" style="display:none">Responsive Slider</a>
+            </div>
+            <!-- Thumbnail Navigator -->
+            <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+                <!-- Thumbnail Item Skin Begin -->
+                <div data-u="slides" style="cursor: default;">
+                    <div data-u="prototype" class="p">
+                        <div class="w">
+                            <div data-u="thumbnailtemplate" class="t"></div>
+                        </div>
+                        <div class="c"></div>
+                    </div>
+                </div>
+                <!-- Thumbnail Item Skin End -->
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+            <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+        </div>
+
+  </section>
+</template>
+
+<template name="recentEvents">
+  <section class="features" id="features">
+    <div class="hide-scroll">
+  <div class="viewport">
+      <div class="container">
+        Resent Events <i class="material-icons">event</i>
+        <div align="center">
+          {{> youtube}}
+        </div>
+      </div>
+  </div>
+  </div>
+  </section>
+</template>
+<template name="productDesc">
+  <section class="testi-sec" id="product">
+    <ul class="bxslider">
+      <!-- TODO: fix me incree height  -->
+      <li>
+          <div class="cd-author" align="center">
+            <img src="img/avatar-1.jpg" alt="Author image">
+            <ul class="cd-author-info">
+              <li>MyName</li>
+              <li>CEO, AmberCreative</li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </ul>
+          </div>
+        </li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="cd-author" align="center">
+            <img src="img/avatar-1.jpg" alt="Author image">
+            <ul class="  ">
+              <li>MyName</li>
+              <li>CEO, AmberCreative</li>
+            </ul>
+          </div></li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="cd-author" align="center">
+            <img src="img/avatar-1.jpg" alt="Author image">
+            <ul class="cd-author-info">
+              <li>MyName</li>
+              <li>CEO, AmberCreative</li>
+            </ul>
+          </div></li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="cd-author" align="center">
+            <img src="img/avatar-1.jpg" alt="Author image">
+            <ul class="cd-author-info">
+              <li>MyName</li>
+              <li>CEO, AmberCreative</li>
+            </ul>
+          </div></li>
+    </ul>
+  </section>
+</template>
+
+<template name="testimonial">
+  <section class="testi-sec" id="testimonial">
+    <ul class="bxslider">
+      <!-- TODO: fix me incree height  -->
+      <li>
+    			<div class="cd-author" align="center">
+    				<img src="img/avatar-1.jpg" alt="Author image">
+    				<ul class="cd-author-info">
+    					<li>MyName</li>
+    					<li>CEO, AmberCreative</li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    				</ul>
+    			</div>
+        </li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    			<div class="cd-author" align="center">
+    				<img src="img/avatar-1.jpg" alt="Author image">
+    				<ul class="  ">
+    					<li>MyName</li>
+    					<li>CEO, AmberCreative</li>
+    				</ul>
+    			</div></li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    			<div class="cd-author" align="center">
+    				<img src="img/avatar-1.jpg" alt="Author image">
+    				<ul class="cd-author-info">
+    					<li>MyName</li>
+    					<li>CEO, AmberCreative</li>
+    				</ul>
+    			</div></li>
+      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    			<div class="cd-author" align="center">
+    				<img src="img/avatar-1.jpg" alt="Author image">
+    				<ul class="cd-author-info">
+    					<li>MyName</li>
+    					<li>CEO, AmberCreative</li>
+    				</ul>
+    			</div></li>
+    </ul>
+    </section>
 </template>
 <template name="footer">
   <div class="footdiv grey-text text-lighten-3">
@@ -177,4 +382,13 @@
 			© 2015-2016  Technologies Pvt. Ltd., All rights reserved.
 		</div>
   </div>
+</template>
+
+<template name="homeTemplate">
+        {{> layoutTemplate}}
+        {{> imageSlider}}
+        {{> recentEvents}}
+        {{> testimonial}}
+        {{> productDesc}}
+        {{> footer}}
 </template>

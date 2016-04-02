@@ -64,3 +64,27 @@ Template.homeTemplate.onRendered(function(){
 	            $(window).bind("orientationchange", ScaleSlider);
 	            //responsive code end
 })
+
+Template.testimonial.onRendered(function(){
+	$('.bxslider').bxSlider();
+})
+
+Template.paricipateform.events({
+	"click .shootEmail":function(evt){
+		evt.preventDefault();
+		evt.stopPropagation();
+		console.log("this");
+var frm = $('#contact_form').serializeObject();
+console.log(frm);
+var msg= "";
+msg +="hello";
+msg +=frm.first_name+"with phone number "+frm.phone+" and Email"+frm.email+"Address:"+frm.address;
+Meteor.call('sendEmail001',
+            'kiran7508@gmail.com',
+            'manju.kb002@gmail.com',
+            'Enquiry',
+            msg);
+						$('.formtemp').hide();
+						$('.alert-success').show();
+	}
+})

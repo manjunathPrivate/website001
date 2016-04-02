@@ -26,3 +26,6 @@ standard-minifier-js
 iron:router
 suxez:jquery-serialize-object
 dburles:google-maps
+email
+rexzh0u:bxslider
+rajit:bootstrap3-datepicker

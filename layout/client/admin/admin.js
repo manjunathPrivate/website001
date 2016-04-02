@@ -27,3 +27,8 @@ Template.adminTemplate.events({
 	 }
 }
 })
+
+
+Template.formTemplate.onRendered(function(){
+	$('#my-datepicker').datepicker();
+})
