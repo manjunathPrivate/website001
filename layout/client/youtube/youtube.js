@@ -19,11 +19,18 @@ Template.youtube.events({
   },
   "click .saveComment": function(evt){
   	var target = $(evt.target);
-    var frm = $("#comment-form").serializeObject();
+    var frm = $("#comment-form-"+target.attr("id")).serializeObject();
+
+   var atpos = x.indexOf("@");
+   var dotpos = x.lastIndexOf(".");
+   if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+       alert("Not a valid e-mail address");
+       return false;
+   }
     var v =  Videos.findOne({videoId:target.attr("id") });
     Videos.update({_id: v._id }, {$push:{comments: frm}});
-    // if(!video.comments) video.comments = [];
-    // video.comments.push(frm);
+    $("#form-"+target.attr("id")).hide();
+    $(".alert-success-comment-"+target.attr("id")).show();
   }
 })
 Template.youtube.helpers({
@@ -35,7 +42,6 @@ Template.youtube.helpers({
         dataType: 'json',
         async: false,
         success: function(data) {
-          console.log(data);
           //ajax call async
         videos[i].viewCount = ((data.items[0]|| {}).statistics|| {}).viewCount|| 0;
         videos[i].likeCount = ((data.items[0]|| {}).statistics|| {}).likeCount|| 0;
@@ -49,20 +55,3 @@ Template.youtube.helpers({
     return videos;
   },
 })
-
-
-// commentCount
-// :
-// "1"
-// dislikeCount
-// :
-// "2"
-// favoriteCount
-// :
-// "0"
-// likeCount
-// :
-// "129"
-// viewCount
-// :
-// "48302"

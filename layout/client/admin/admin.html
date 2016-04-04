@@ -61,19 +61,33 @@
 			<label for="date">Posted Date</label>
 		</div>
 		<div class="col s6">
-		<input name="type" type="radio" id="test1" />
-		<label for="test1">technology</label>
-		<input name="type" type="radio" id="test2" />
-		<label for="test2">cultural</label>
-		<input class="" name="type" type="radio" id="test3"  />
-		<label for="test3">enginericng</label>
-		<input name="type" type="radio" id="test4"  />
-		<label for="test4">medical</label>
-		<input name="type" type="radio" id="test5"  />
-		<label for="test5">law</label>
-
+		<div class="col s8 margin-top">
+					<div class="row grey-text text-darken-3 bold">what kind of video?</div>
+					<div class="row">
+								<span class="col s6">
+									<input id="-Technology" type="radio" name="relation" data-default-value="Technology" value="Technology" class="form-field validate with-gap">
+									<label class="active" for="-Technology">Technology</label>
+								</span>
+								<span class="col s6">
+									<input id="-Cultural" type="radio" name="relation" data-default-value="Cultural" value="Cultural" class="form-field validate with-gap">
+									<label class="active" for="-Cultural">Cultural</label>
+								</span>
+								<span class="col s6">
+									<input id="-Enginericng" type="radio" name="relation" data-default-value="Enginericng" value="Enginericng" class="form-field validate with-gap">
+									<label class="active" for="-Enginericng">Enginericng</label>
+								</span>
+								<span class="col s6">
+									<input id="-Medical" type="radio" name="relation" data-default-value="Medical" value="Medical" class="form-field validate with-gap">
+									<label class="active" for="-Medical">Medical</label>
+								</span>
+								<span class="col s6">
+									<input id="-Law" type="radio" name="relation" data-default-value="Law" value="Law" class="form-field validate with-gap">
+									<label class="active" for="-Law">Law</label>
+								</span>
+					</div>
+				</div>
+				<a align="center" class="waves-effect waves-light btn saveVideo"><i class="material-icons left">cloud</i>publish video</a>
 		</div>
-		<a align="center" class="waves-effect waves-light btn saveVideo"><i class="material-icons left">cloud</i>publish video</a>
 	</div>
 	</form>
 </template>

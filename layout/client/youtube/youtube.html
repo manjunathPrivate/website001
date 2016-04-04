@@ -26,10 +26,14 @@
 			</div>
 			<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
 			<div class="row" style="text-align: left">
+			<div class="" style="padding-left: 41em;">
+				{{#if video.comments.length}}
 				comments({{video.comments.length}})<br>
+				{{/if}}
+			</div>
 									<div class="noteMeta bold col s4 left">
 										{{#each comment in video.comments}}
-											<div class="small border-top-teal">
+											<div class="small">
 												@{{comment.userName}} {{comment.message}}
 												<div class="">
 
@@ -38,8 +42,9 @@
 										{{/each}}
 
 									</div>
+									  <div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
 									<div id="form-{{video.videoId}}" class="right row" style="display:none">
-								<form id="comment-form">
+								<form id="comment-form-{{video.videoId}}">
 									<div class="">
 										<div class="input-field  s3">
 											<i class="material-icons prefix">account_circle</i>

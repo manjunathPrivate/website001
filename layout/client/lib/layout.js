@@ -68,6 +68,52 @@ Template.homeTemplate.onRendered(function(){
 Template.testimonial.onRendered(function(){
 	$('.bxslider').bxSlider();
 })
+Template.blogTemplate.onRendered(function(){
+	onYouTubeIframeAPIReady = function () {
+			var videos = Videos.find().fetch();
+			for (var i = 0; i < videos.length; i++) {
+				var id = videos[i].videoId
+				player = new YT.Player(id, {
+					height: "200",
+					width: "200",
+					videoId: id,
+				});
+			}
+	};
+YT.load();
+})
+
+Template.blogTemplate.helpers({
+	videos: function(){
+		var videos = Videos.find().fetch();
+		var res = {
+			Cultural:[],
+			Law:[],
+			Medical:[],
+			Technology:[],
+			Enginericng:[]
+		};
+		videos.map(function(it){
+			if(it.relation === "Cultural") {
+				res.Cultural.push(it)
+			}
+			if(it.relation === "Law") {
+				res.Law.push(it)
+			}
+			if(it.relation === "Medical") {
+				res.Medical.push(it)
+			}
+			if(it.relation === "Technology"){
+				res.Technology.push(it)
+			}
+			if(it.relation === "Enginericng"){
+				res.Enginericng.push(it)
+			}
+		})
+		console.log(res);
+		return res;
+	}
+})
 
 Template.paricipateform.events({
 	"click .shootEmail":function(evt){
