@@ -16,7 +16,7 @@
              <div class="navbar-collapse collapse">
                  <ul class="nav navbar-nav navbar-right">
                      <li><a  href="/">Home</a></li>
-                     <li><a href="/#product">Product</a></li>
+                     <!-- <li><a href="/#product">Product</a></li> -->
                      <li><a href="/blog">Events</a></li>
                      <li><a href="/paricipate">Attendend/Paricipate</a></li>
                      <li><a href="/aboutus">About us</a></li>
@@ -29,6 +29,9 @@
 
 <template name="blogTemplate">
   {{>layoutTemplate}}
+  <br>
+  <br>
+  <br>
   <div class="row viewport">
     <h1>Cultural</h1>
     {{#each video in videos.Cultural}}
@@ -327,47 +330,6 @@
   </div>
   </section>
 </template>
-<template name="productDesc">
-  <section class="testi-sec" id="product">
-    <ul class="bxslider">
-      <!-- TODO: fix me incree height  -->
-      <li>
-          <div class="cd-author" align="center">
-            <img src="img/avatar-1.jpg" alt="Author image">
-            <ul class="cd-author-info">
-              <li>MyName</li>
-              <li>CEO, AmberCreative</li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </ul>
-          </div>
-        </li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="cd-author" align="center">
-            <img src="img/avatar-1.jpg" alt="Author image">
-            <ul class="  ">
-              <li>MyName</li>
-              <li>CEO, AmberCreative</li>
-            </ul>
-          </div></li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="cd-author" align="center">
-            <img src="img/avatar-1.jpg" alt="Author image">
-            <ul class="cd-author-info">
-              <li>MyName</li>
-              <li>CEO, AmberCreative</li>
-            </ul>
-          </div></li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="cd-author" align="center">
-            <img src="img/avatar-1.jpg" alt="Author image">
-            <ul class="cd-author-info">
-              <li>MyName</li>
-              <li>CEO, AmberCreative</li>
-            </ul>
-          </div></li>
-    </ul>
-  </section>
-</template>
 
 <template name="testimonial">
   <section class="testi-sec" id="testimonial">
@@ -379,37 +341,34 @@
     				<ul class="cd-author-info">
     					<li>MyName</li>
     					<li>CEO, AmberCreative</li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
     				</ul>
     			</div>
         </li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    			<div class="cd-author" align="center">
-    				<img src="img/avatar-1.jpg" alt="Author image">
-    				<ul class="  ">
-    					<li>MyName</li>
-    					<li>CEO, AmberCreative</li>
-    				</ul>
-    			</div></li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <li>
     			<div class="cd-author" align="center">
     				<img src="img/avatar-1.jpg" alt="Author image">
     				<ul class="cd-author-info">
     					<li>MyName</li>
     					<li>CEO, AmberCreative</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
     				</ul>
-    			</div></li>
-      <li>		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    			</div>
+        </li>
+      <li>
     			<div class="cd-author" align="center">
     				<img src="img/avatar-1.jpg" alt="Author image">
     				<ul class="cd-author-info">
     					<li>MyName</li>
     					<li>CEO, AmberCreative</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
     				</ul>
-    			</div></li>
+    			</div>
+        </li>
     </ul>
     </section>
 </template>
+
 <template name="footer">
   <div class="footdiv grey-text text-lighten-3">
     <div class="row without-margin-bottom top-row">
@@ -441,7 +400,7 @@
       </div>
     </div>
 		<div class="white-text footer-copyright">
-			© 2015-2016 Aata-Aux Technologies Pvt. Ltd., All rights reserved.
+			© 2015-2016 Data-Aux Technologies Pvt. Ltd., All rights reserved.
 		</div>
   </div>
 </template>
@@ -451,6 +410,6 @@
         {{> imageSlider}}
         {{> recentEvents}}
         {{> testimonial}}
-        {{> productDesc}}
+        <!-- {{> productDesc}} -->
         {{> footer}}
 </template>
