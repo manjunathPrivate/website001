@@ -3,8 +3,9 @@
 <template name="youtube">
 	{{#if done}}
 	{{#each video in videos}}
-		<div id="{{video.videoId}}" class="col left">
-		</div>
+		{{video.videoId}}
+		<span id="{{video.videoId}}" class="col left">
+		</span>
 		<div class="row">
 			<div class="col left">
 				<i class="material-icons left">thumb_up</i>

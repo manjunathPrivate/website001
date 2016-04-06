@@ -1,4 +1,33 @@
-Template.youtube.onCreated(function(){
+// Template.youtube.onCreated(function(){
+// 	onYouTubeIframeAPIReady = function () {
+// 			var videos = Videos.find().fetch();
+// 			for (var i = 0; i < videos.length; i++) {
+// 				var id = videos[i].videoId
+// 				player = new YT.Player(id, {
+// 					height: "200",
+// 					width: "400",
+// 					videoId: id,
+// 				});
+// 			}
+// 	};
+// YT.load();
+// Session.set("done", true);
+// })
+Meteor.startup(function () {
+		onYouTubeIframeAPIReady = function () {
+				var videos = Videos.find().fetch();
+				for (var i = 0; i < videos.length; i++) {
+					var id = videos[i].videoId
+					player = new YT.Player(id, {
+						height: "200",
+						width: "400",
+						videoId: id,
+					});
+				}
+		};
+});
+
+Template.youtube.onRendered(function(){
 	onYouTubeIframeAPIReady = function () {
 			var videos = Videos.find().fetch();
 			for (var i = 0; i < videos.length; i++) {
