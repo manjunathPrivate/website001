@@ -1,17 +1,18 @@
-if (Meteor.isClient) {
-    onYouTubeIframeAPIReady = function () {
-        var videos = Videos.find().fetch();
-        for (var i = 0; i < videos.length; i++) {
-          var id = videos[i].videoId
-          player = new YT.Player(id, {
-            height: "200",
-            width: "400",
-            videoId: id,
-          });
-        }
-    };
-  YT.load();
-}
+Template.youtube.onCreated(function(){
+	onYouTubeIframeAPIReady = function () {
+			var videos = Videos.find().fetch();
+			for (var i = 0; i < videos.length; i++) {
+				var id = videos[i].videoId
+				player = new YT.Player(id, {
+					height: "200",
+					width: "400",
+					videoId: id,
+				});
+			}
+	};
+YT.load();
+Session.set("done", true);
+})
 Template.youtube.events({
   "click .addComment": function(evt){
   	var target = $(evt.target);
@@ -54,4 +55,7 @@ Template.youtube.helpers({
    }
     return videos;
   },
+	done: function(){
+		return Session.get("done");
+	}
 })
