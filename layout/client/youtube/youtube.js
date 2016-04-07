@@ -50,13 +50,6 @@ Template.youtube.events({
   "click .saveComment": function(evt){
   	var target = $(evt.target);
     var frm = $("#comment-form-"+target.attr("id")).serializeObject();
-
-   var atpos = x.indexOf("@");
-   var dotpos = x.lastIndexOf(".");
-   if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-       alert("Not a valid e-mail address");
-       return false;
-   }
     var v =  Videos.findOne({videoId:target.attr("id") });
     Videos.update({_id: v._id }, {$push:{comments: frm}});
     $("#form-"+target.attr("id")).hide();

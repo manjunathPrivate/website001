@@ -110,7 +110,6 @@ Template.blogTemplate.helpers({
 				res.Enginericng.push(it)
 			}
 		})
-		console.log(res);
 		return res;
 	}
 })
@@ -119,9 +118,7 @@ Template.paricipateform.events({
 	"click .shootEmail":function(evt){
 		evt.preventDefault();
 		evt.stopPropagation();
-		console.log("this");
 var frm = $('#contact_form').serializeObject();
-console.log(frm);
 var msg= "";
 msg +="hello";
 msg +=frm.first_name+"with phone number "+frm.phone+" and Email"+frm.email+"Address:"+frm.address;
