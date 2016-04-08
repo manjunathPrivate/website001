@@ -1,74 +1,78 @@
 
 
 <template name="youtube">
-	{{#each video in videosYoutube}}
+	{{#if Template.subscriptionsReady}}
+		{{#each video in videosYoutube}}
 
-		<span id="{{video.videoId}}" class="col left">
-		</span>
-		<div class="row">
-			<div class="col left">
-				<i class="material-icons left">thumb_up</i>
-				{{video.likeCount}}
-			</div>
-			<div class="col left">
-				<i class="material-icons left">thumb_down</i>
-				{{video.dislikeCount}}
-			</div>
-			<div class="col right">
-				<i class="material-icons left">visibility</i>
-				{{video.viewCount}}
-			</div>
-			<div class="col right">
-				<i class="material-icons left">favorite_border</i>
-				{{video.favoriteCount}}
-			</div>
-			<div class="col bold">
-				{{video.title}}
-			</div>
-			<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
-			<div class="row" style="text-align: left">
-			<div class="" style="padding-left: 41em;">
-				{{#if video.comments.length}}
-				comments({{video.comments.length}})<br>
-				{{/if}}
-			</div>
-									<div class="noteMeta bold col s4 left">
-										{{#each comment in video.comments}}
-											<div class="small">
-												@{{comment.userName}} {{comment.message}}
-												<div class="">
+			<span id="{{video.videoId}}" class="col left">
+			</span>
+			<div class="row">
+				<div class="col left">
+					<i class="material-icons left">thumb_up</i>
+					{{video.likeCount}}
+				</div>
+				<div class="col left">
+					<i class="material-icons left">thumb_down</i>
+					{{video.dislikeCount}}
+				</div>
+				<div class="col right">
+					<i class="material-icons left">visibility</i>
+					{{video.viewCount}}
+				</div>
+				<div class="col right">
+					<i class="material-icons left">favorite_border</i>
+					{{video.favoriteCount}}
+				</div>
+				<div class="col bold">
+					{{video.title}}
+				</div>
+				<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
+				<div class="row" style="text-align: left">
+				<div class="" style="padding-left: 41em;">
+					{{#if video.comments.length}}
+					comments({{video.comments.length}})<br>
+					{{/if}}
+				</div>
+										<div class="noteMeta bold col s4 left">
+											{{#each comment in video.comments}}
+												<div class="small">
+													@{{comment.userName}} {{comment.message}}
+													<div class="">
 
+													</div>
 												</div>
+											{{/each}}
+
+										</div>
+										  <div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
+										<div id="form-{{video.videoId}}" class="right row" style="display:none">
+									<form id="comment-form-{{video.videoId}}">
+										<div class="">
+											<div class="input-field  s3">
+												<i class="material-icons prefix">account_circle</i>
+												<input id="icon_prefix" name="userName" type="text" class="validate">
+												<label for="icon_prefix">Name</label>
 											</div>
-										{{/each}}
-
-									</div>
-									  <div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
-									<div id="form-{{video.videoId}}" class="right row" style="display:none">
-								<form id="comment-form-{{video.videoId}}">
-									<div class="">
-										<div class="input-field  s3">
-											<i class="material-icons prefix">account_circle</i>
-											<input id="icon_prefix" name="userName" type="text" class="validate">
-											<label for="icon_prefix">Name</label>
+											<div class="input-field  s3">
+												<i class="material-icons prefix">email</i>
+												<input id="icon_telephone" name="emailId" type="tel" class="validate">
+												<label for="icon_telephone">Email</label>
+											</div>
+											<div class="input-field  s6">
+										 <i class="material-icons prefix">mode_edit</i>
+											 <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
+											 <label for="textarea1">Your message</label>
+										 </div>
+										 <a align="center" id="{{video.videoId}}" class="waves-effect waves-light btn saveComment"><i class="material-icons left">cloud</i>Post</a>
 										</div>
-										<div class="input-field  s3">
-											<i class="material-icons prefix">email</i>
-											<input id="icon_telephone" name="emailId" type="tel" class="validate">
-											<label for="icon_telephone">Email</label>
-										</div>
-										<div class="input-field  s6">
-									 <i class="material-icons prefix">mode_edit</i>
-										 <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
-										 <label for="textarea1">Your message</label>
-									 </div>
-									 <a align="center" id="{{video.videoId}}" class="waves-effect waves-light btn saveComment"><i class="material-icons left">cloud</i>Post</a>
-									</div>
-								</form>
-							</div>
-
+									</form>
 								</div>
 
-		</div>
-	{{/each}}
-</template>
+									</div>
+
+			</div>
+		{{/each}}
+    {{else}}
+			spinning
+    {{/if}}
+	</template>

@@ -406,11 +406,74 @@
   </div>
 </template>
 
-<template name="homeTemplate">
+<!-- <template name="homeTemplate">
         {{> layoutTemplate}}
         {{> imageSlider}}
         {{> recentEvents}}
         {{> testimonial}}
         <!-- {{> productDesc}} -->
-        {{> footer}}
+        <!-- {{> footer}} -->
+<template name="homeTemplate">
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	    <meta name="description" content="" />
+	    <meta name="author" content="" />
+	    <title>Landing Page Template</title>
+	    <!-- BOOTSTRAP CORE STYLE CSS -->
+	    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+	    <!-- FONT AWESOME CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+	     <!-- STYLE SWITCHER  CSS -->
+	<link href="assets/css/styleSwitcher.css" rel="stylesheet" />
+	    <!-- CUSTOM STYLE CSS -->
+	    <link href="assets/css/style.css" rel="stylesheet" />
+	     <!--GREEN STYLE VERSION IS BY DEFAULT, USE ANY ONE STYLESHEET FROM TWO STYLESHEETS (green or red) HERE-->
+	     <link href="assets/css/themes/green.css" id="mainCSS" rel="stylesheet" />
+	  <!-- Google	Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+	</head>
+<body>
+		<!--END STYLE SWITCHER-->
+		<div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
+			 <div class="container">
+					 <div class="navbar-header">
+							 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									 <span class="icon-bar"></span>
+									 <span class="icon-bar"></span>
+									 <span class="icon-bar"></span>
+							 </button>
+							 <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo180-50.png" alt=""  /></a>
+					 </div>
+					 <div class="navbar-collapse collapse">
+							 <ul class="nav navbar-nav navbar-right">
+									 <li><a  href="/">Home</a></li>
+									 <!-- <li><a href="/#product">Product</a></li> -->
+									 <li><a href="/blog">Events</a></li>
+									 <li><a href="/paricipate">Attendend/Paricipate</a></li>
+									 <li><a href="/aboutus">About us</a></li>
+							 </ul>
+					 </div>
+
+			 </div>
+	 </div>
+			<!--NAVBAR SECTION END-->
+			 <section class="header-sec" id="home" >
+					  {{> imageSlider}}
+
+			 </section>
+			 <!--HEADER SECTION END-->
+	 		<section class="features" id="features">
+  			{{> recentEvents}}
+		 </section>
+		<!--FEATURES SECTION END-->
+		 <section class="testi-sec" >
+			{{> testimonial}}
+			 </section>
+			 <!--TESTIMONIAL SECTION END-->
+			<section class="developers" id="developers" >
+			{{> footer}}
+		 </section>
+
+</body>
 </template>
