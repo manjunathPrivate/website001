@@ -14,6 +14,7 @@
 // Session.set("done", true);
 // })
 Meteor.startup(function () {
+		Meteor.subscribe('videos');
 		onYouTubeIframeAPIReady = function () {
 				var videos = Videos.find().fetch();
 				for (var i = 0; i < videos.length; i++) {
@@ -28,19 +29,20 @@ Meteor.startup(function () {
 });
 
 Template.youtube.onRendered(function(){
-	onYouTubeIframeAPIReady = function () {
-			var videos = Videos.find().fetch();
-			for (var i = 0; i < videos.length; i++) {
-				var id = videos[i].videoId
-				player = new YT.Player(id, {
-					height: "200",
-					width: "400",
-					videoId: id,
-				});
-			}
-	};
-YT.load();
-Session.set("done", true);
+// 	onYouTubeIframeAPIReady = function () {
+// 			var videos = Videos.find().fetch();
+// 			for (var i = 0; i < videos.length; i++) {
+// 				var id = videos[i].videoId
+// 				player = new YT.Player(id, {
+// 					height: "200",
+// 					width: "400",
+// 					videoId: id,
+// 				});
+// 			}
+// 			console.log("yputube frame loded render ");
+// 	};
+// YT.load();
+// Session.set("done", true);
 })
 Template.youtube.events({
   "click .addComment": function(evt){
@@ -57,7 +59,21 @@ Template.youtube.events({
   }
 })
 Template.youtube.helpers({
-  videos:function(){
+  videosYoutube:function(){
+			onYouTubeIframeAPIReady = function () {
+					var videos = Videos.find().fetch();
+					for (var i = 0; i < videos.length; i++) {
+						var id = videos[i].videoId
+						player = new YT.Player(id, {
+							height: "200",
+							width: "400",
+							videoId: id,
+						});
+					}
+					console.log("yputube frame loded render ");
+			};
+		YT.load();
+		Session.set("done", true);
    var videos = Videos.find().fetch();
    for (var i = 0; i < videos.length; i++) {
      $.ajax({
@@ -75,6 +91,7 @@ Template.youtube.helpers({
       }
     });
    }
+	 console.log("retrning vifeos ");
     return videos;
   },
 	done: function(){

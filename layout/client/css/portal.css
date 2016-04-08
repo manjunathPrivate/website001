@@ -43,13 +43,6 @@ div.unitNotesDiv{ height: 10rem; padding: 0 1rem 0 0.5rem; overflow: auto;}
 td.unitNotes{ padding: 0 0 ;}
 
 .email-body { height: 150px; overflow-y: auto; padding: 0 5px; font-size: 0.8rem; border: 1px solid #ddd; }
-/**
-* @author Sudhanshu
-* @@maintainers Sudhanshu
-* @since Nov 03, 2015
-*/
-
-@import "{francocatena:compass}/compass";
 
 html, body {position: relative; color: #786464 !important; height: 100%;}
 /*media="screen, projection"*/

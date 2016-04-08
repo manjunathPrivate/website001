@@ -1,8 +1,7 @@
 
 
 <template name="youtube">
-	{{#if done}}
-	{{#each video in videos}}
+	{{#each video in videosYoutube}}
 
 		<span id="{{video.videoId}}" class="col left">
 		</span>
@@ -72,7 +71,4 @@
 
 		</div>
 	{{/each}}
-	{{else}}
-	{{> spinner}}
-	{{/if}}
 </template>

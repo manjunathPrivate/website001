@@ -14,3 +14,23 @@ Meteor.methods({
     });
   }
 });
+
+onYouTubeIframeAPIReady = function () {
+		var videos = Videos.find().fetch();
+		for (var i = 0; i < videos.length; i++) {
+			var id = videos[i].videoId
+			player = new YT.Player(id, {
+				height: "200",
+				width: "400",
+				videoId: id,
+			});
+		}
+};
+
+
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('videos', function tasksPublication() {
+    return Videos.find();
+  });
+}

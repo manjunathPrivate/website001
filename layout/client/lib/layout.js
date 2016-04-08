@@ -79,6 +79,7 @@ Template.blogTemplate.onRendered(function(){
 					videoId: id,
 				});
 			}
+			console.log("renderer videoId");
 	};
 YT.load();
 })
@@ -110,6 +111,8 @@ Template.blogTemplate.helpers({
 				res.Enginericng.push(it)
 			}
 		})
+
+		console.log("return result");
 		return res;
 	}
 })
