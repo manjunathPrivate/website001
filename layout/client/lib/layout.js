@@ -111,8 +111,6 @@ Template.blogTemplate.helpers({
 				res.Enginericng.push(it)
 			}
 		})
-
-		console.log("return result");
 		return res;
 	}
 })
