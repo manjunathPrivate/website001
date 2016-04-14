@@ -2,8 +2,12 @@
 
 <template name="youtube">
 	{{#if Template.subscriptionsReady}}
+	<div class="row s12">
 		{{#each video in videosYoutube}}
-
+		<div class="col s6">
+			<div class="col bold">
+				{{video.title}}
+			</div>
 			<span id="{{video.videoId}}" class="col left">
 			</span>
 			<div class="row">
@@ -15,36 +19,27 @@
 					<i class="material-icons left">thumb_down</i>
 					{{video.dislikeCount}}
 				</div>
-				<div class="col right">
+				<div class="col left">
 					<i class="material-icons left">visibility</i>
 					{{video.viewCount}}
 				</div>
-				<div class="col right">
+				<div class="col left">
 					<i class="material-icons left">favorite_border</i>
 					{{video.favoriteCount}}
 				</div>
-				<div class="col bold">
-					{{video.title}}
+				{{#if video.comments.length}}
+				comments({{video.comments.length}})<br>
+				{{/if}}
+				<div style="text-align: left; max-height: 16em;overflow-y: scroll;   overflow-x: hidden;" class="col s4 left  comment-{{video.videoId}}">
+					{{#each comment in video.comments}}
+					<div class="">
+						@{{comment.userName}}:  {{comment.message}}
+					</div>
+					{{/each}}
 				</div>
-				<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
-				<div class="row" style="text-align: left">
-				<div class="" style="padding-left: 41em;">
-					{{#if video.comments.length}}
-					comments({{video.comments.length}})<br>
-					{{/if}}
-				</div>
-										<div class="noteMeta bold col s4 left">
-											{{#each comment in video.comments}}
-												<div class="small">
-													@{{comment.userName}} {{comment.message}}
-													<div class="">
+				<div class="col s4 left" style="text-align: left">
 
-													</div>
-												</div>
-											{{/each}}
-
-										</div>
-										  <div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
+											<div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
 										<div id="form-{{video.videoId}}" class="right row" style="display:none">
 									<form id="comment-form-{{video.videoId}}">
 										<div class="">
@@ -63,15 +58,22 @@
 											 <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
 											 <label for="textarea1">Your message</label>
 										 </div>
-										 <a align="center" id="{{video.videoId}}" class="waves-effect waves-light btn saveComment"><i class="material-icons left">cloud</i>Post</a>
+										 <button type="button" id="{{video.videoId}}" class="btn btn-info btn-sm row saveComment">Save</button>
+										 <button type="button" class="btn btn-info btn-sm row cancelComment">Cancel</button>
+										 <!-- <a align="center" id="{{video.videoId}}" class="waves-effect waves-light btn saveComment"><i class="material-icons left">cloud</i>Post</a> -->
 										</div>
 									</form>
 								</div>
 
 									</div>
-
+				<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
 			</div>
+		</div>
 		{{/each}}
+
+
+
+	</div>
     {{else}}
 			spinning
     {{/if}}

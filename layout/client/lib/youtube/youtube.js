@@ -21,7 +21,12 @@ Meteor.startup(function () {
 Template.youtube.events({
   "click .addComment": function(evt){
   	var target = $(evt.target);
+    $(".comment-"+target.attr("id")).hide();
     $("#form-"+target.attr("id")).show();
+  },
+  "click .cancelComment": function(evt){
+  	var target = $(evt.target);
+  	$(".comment-"+target.attr("id")).show();
   },
   "click .saveComment": function(evt){
   	var target = $(evt.target);
@@ -29,6 +34,7 @@ Template.youtube.events({
     var v =  Videos.findOne({videoId:target.attr("id") });
     Videos.update({_id: v._id }, {$push:{comments: frm}});
     $("#form-"+target.attr("id")).hide();
+	  $(".comment-"+target.attr("id")).show();
     $(".alert-success-comment-"+target.attr("id")).show();
   }
 })
