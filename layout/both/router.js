@@ -1,5 +1,12 @@
 Router.route('/', function () {
   this.render('homeTemplate');
+	this.layout("mainNav");
+});
+
+
+Router.configure({
+ // the default layout
+ layoutTemplate: 'mainNav'
 });
 
 Router.route("/admin", {

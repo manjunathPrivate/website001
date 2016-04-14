@@ -1,9 +1,9 @@
 <head>
   <title>Talks</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
-<template name="layoutTemplate">
+
+<template name="mainNav">
   <div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
          <div class="container">
              <div class="navbar-header">
@@ -12,13 +12,12 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                  </button>
-                 <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo180-50.png" alt=""  /></a>
+                 <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo-data-aux.png" alt=""  /></a>
              </div>
              <div class="navbar-collapse collapse">
                  <ul class="nav navbar-nav navbar-right">
                      <li><a  href="/">Home</a></li>
-                     <!-- <li><a href="/#product">Product</a></li> -->
-                     <li><a href="/blog">Events</a></li>
+									   <li><a href="/blog">Events</a></li>
                      <li><a href="/paricipate">Attendend/Paricipate</a></li>
                      <li><a href="/aboutus">About us</a></li>
                  </ul>
@@ -26,10 +25,29 @@
 
          </div>
      </div>
+		 <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+	 <div class="container">
+			{{> yield }}
+	 </div>
 </template>
 
 <template name="blogTemplate">
-  {{>layoutTemplate}}
   <br>
   <br>
   <br>
@@ -72,7 +90,6 @@
 </template>
 
 <template name="paricipateform">
-  {{>layoutTemplate}}
   <div class="container">
       <form class="well form-horizontal"  id="contact_form">
   <fieldset>
@@ -176,7 +193,6 @@
 
 </template>
 <template name="aboutUs">
-  {{>layoutTemplate}}
 	<section id="twoColumnLayout" class="row grey">
 		<div class="center">
 			<h1>Two Column Layout</h1>
@@ -216,61 +232,35 @@
             </div>
             <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
                 <div data-p="144.50" style="display: none;">
-                  <div class="carousel-caption light">
+                  <div class="carousel-caption light left">
                    <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
                  </div>
-                    <img data-u="image" src="img/01.jpg" />
-                    <img data-u="thumb" src="img/thumb-01.jpg" />
+                    <img data-u="image" src="img/slider/email-dev.jpg" />
+                    <img data-u="thumb" src="img/slider/email-dev.jpg" />
                 </div>
                 <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/02.jpg" />
-                    <img data-u="thumb" src="img/thumb-02.jpg" />
+									<div class="carousel-caption light left">
+                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+                 </div>
+                    <img data-u="image" src="img/slider/mobile-dev.jpg" />
+                    <img data-u="thumb" src="img/slider/mobile-dev.jpg" />
                 </div>
                 <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/03.jpg" />
-                    <img data-u="thumb" src="img/thumb-03.jpg" />
+									<div class="carousel-caption light left">
+                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+                 </div>
+                    <img data-u="image" src="img/slider/sequrity-dev.jpg" />
+                    <img data-u="thumb" src="img/slider/sequrity-dev.jpg" />
                 </div>
                 <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/04.jpg" />
-                    <img data-u="thumb" src="img/thumb-04.jpg" />
+									<div class="carousel-caption light left">
+                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+                 </div>
+                    <img data-u="image" src="img/slider/web-dev.jpg" />
+                    <img data-u="thumb" src="img/slider/web-dev.jpg" />
                 </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/05.jpg" />
-                    <img data-u="thumb" src="img/thumb-05.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/06.jpg" />
-                    <img data-u="thumb" src="img/thumb-06.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/07.jpg" />
-                    <img data-u="thumb" src="img/thumb-07.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/08.jpg" />
-                    <img data-u="thumb" src="img/thumb-08.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/09.jpg" />
-                    <img data-u="thumb" src="img/thumb-09.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/10.jpg" />
-                    <img data-u="thumb" src="img/thumb-10.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/11.jpg" />
-                    <img data-u="thumb" src="img/thumb-11.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-                    <img data-u="image" src="img/12.jpg" />
-                    <img data-u="thumb" src="img/thumb-12.jpg" />
-                </div>
-                <a data-u="ad" href="http://www.jssor.com" style="display:none">Responsive Slider</a>
             </div>
-            <!-- Thumbnail Navigator -->
             <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
-                <!-- Thumbnail Item Skin Begin -->
                 <div data-u="slides" style="cursor: default;">
                     <div data-u="prototype" class="p">
                         <div class="w">
@@ -279,9 +269,7 @@
                         <div class="c"></div>
                     </div>
                 </div>
-                <!-- Thumbnail Item Skin End -->
             </div>
-            <!-- Arrow Navigator -->
             <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
             <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
         </div>
@@ -376,74 +364,19 @@
   </div>
 </template>
 
-<!-- <template name="homeTemplate">
-        {{> layoutTemplate}}
-        {{> imageSlider}}
-        {{> recentEvents}}
-        {{> testimonial}}
-        <!-- {{> productDesc}} -->
-        <!-- {{> footer}} -->
-<template name="homeTemplate">
-	<head>
-	    <meta charset="utf-8" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	    <meta name="description" content="" />
-	    <meta name="author" content="" />
-	    <title>Landing Page Template</title>
-	    <!-- BOOTSTRAP CORE STYLE CSS -->
-	    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-	    <!-- FONT AWESOME CSS -->
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-	     <!-- STYLE SWITCHER  CSS -->
-	<link href="assets/css/styleSwitcher.css" rel="stylesheet" />
-	    <!-- CUSTOM STYLE CSS -->
-	    <link href="assets/css/style.css" rel="stylesheet" />
-	     <!--GREEN STYLE VERSION IS BY DEFAULT, USE ANY ONE STYLESHEET FROM TWO STYLESHEETS (green or red) HERE-->
-	     <link href="assets/css/themes/green.css" id="mainCSS" rel="stylesheet" />
-	  <!-- Google	Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
-	</head>
-<body>
-		<!--END STYLE SWITCHER-->
-		<div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
-			 <div class="container">
-					 <div class="navbar-header">
-							 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-									 <span class="icon-bar"></span>
-									 <span class="icon-bar"></span>
-									 <span class="icon-bar"></span>
-							 </button>
-							 <a class="navbar-brand" href="#"><img class="logo-custom" src="/img/logo180-50.png" alt=""  /></a>
-					 </div>
-					 <div class="navbar-collapse collapse">
-							 <ul class="nav navbar-nav navbar-right">
-									 <li><a  href="/">Home</a></li>
-									 <!-- <li><a href="/#product">Product</a></li> -->
-									 <li><a href="/blog">Events</a></li>
-									 <li><a href="/paricipate">Attendend/Paricipate</a></li>
-									 <li><a href="/aboutus">About us</a></li>
-							 </ul>
-					 </div>
 
-			 </div>
-	 </div>
-			<!--NAVBAR SECTION END-->
+<template name="homeTemplate">
 			 <section class="header-sec" id="home" >
 					  {{> imageSlider}}
-
 			 </section>
 			 <!--HEADER SECTION END-->
-	 		<section class="features" id="features">
-  			{{> recentEvents}}
-		 </section>
-		<!--FEATURES SECTION END-->
-		 <section class="testi-sec" >
-			{{> testimonial}}
+		 		<section class="features" id="features">
+		  			{{> recentEvents}}
 			 </section>
-			 <!--TESTIMONIAL SECTION END-->
-			<section class="developers" id="developers" >
-			{{> footer}}
+			 <section class="testi-sec" >
+						{{> testimonial}}
+			 </section>
+			 <section class="developers" id="developers" >
+						{{> footer}}
 		 </section>
-
-</body>
 </template>

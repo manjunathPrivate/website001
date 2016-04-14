@@ -1,17 +1,5 @@
-﻿/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-
-    ========================================================  */
-
-/* =============================================================
-   GENERAL STYLES
- ============================================================ */
+//manju
+//Apr 2016
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 30px;
@@ -53,16 +41,13 @@ section {
 p {
     padding:10px 0px;
 }
-/*=====================================
-  NAVBAR STYLES
-    ===================================*/
 
 .logo-custom {
      max-height:30px
 }
 #menu {
     /*background-color:#4bb777;*/
-    background:#5C4BB7;
+    background:white;
     color:#fff;
     font-size:12px;
     font-weight:900;
@@ -313,7 +298,7 @@ background-size: cover;
 
 
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -340,9 +325,9 @@ img {
   max-width: 100%;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 .cd-testimonials-wrapper {

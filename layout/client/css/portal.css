@@ -48,8 +48,6 @@ html, body {position: relative; color: #786464 !important; height: 100%;}
 /*media="screen, projection"*/
 .settlin {background: #E0454C; }
 
-.container { width: 90%; max-width: 90%; }
-
 /*li .active { background-color: #4db6ac; }*/
 .page-title { font-size: 1.5rem; margin-left: 25rem; }
 
