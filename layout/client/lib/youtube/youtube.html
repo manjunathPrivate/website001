@@ -1,32 +1,86 @@
 
 
-
 <template name="youtube">
 	{{#if Template.subscriptionsReady}}
-	<div class="row s12">
+	<div class="row s12 viewport ">
 		{{#each video in videosYoutube}}
-		<div class="col s6">
-			<div class="col bold">
-				{{video.title}}
+			<div style="padding: 20px" class="col s6 ">
+				<div class="card">
+					<div class="card-image">
+						<div style="text-align: left; max-height: 16em;overflow-y: scroll;   overflow-x: hidden;" class="col s4 right   comment-{{video.videoId}}">
+							{{#each comment in video.comments}}
+							<div class="">
+								@{{comment.userName}}:  {{comment.message}}
+							</div>
+							{{/each}}
+						</div>
+
+						<div id="{{video.videoId}}" class="row">
+
+						</div>
+						<div class="col s4 right" style="text-align: left">
+
+											<div style="display:none" class="alert alert-success-comment-{{video.videoId}}" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for posting your valuable comments.</div>
+										<div id="form-{{video.videoId}}" class="right row" style="display:none">
+									<form id="comment-form-{{video.videoId}}">
+										<div class="">
+											<div class="input-field  s3">
+												<i class="material-icons prefix">account_circle</i>
+												<input id="icon_prefix" name="userName" type="text" class="validate">
+												<label for="icon_prefix">Name</label>
+											</div>
+											<div class="input-field  s3">
+												<i class="material-icons prefix">email</i>
+												<input id="icon_telephone" name="emailId" type="tel" class="validate">
+												<label for="icon_telephone">Email</label>
+											</div>
+											<div class="input-field  s6">
+										 <i class="material-icons prefix">mode_edit</i>
+											 <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
+											 <label for="textarea1">Your message</label>
+										 </div>
+										 <button type="button" id="{{video.videoId}}" class="btn btn-info btn-sm row saveComment">Save</button>
+										 <button type="button" class="btn btn-info btn-sm row cancelComment">Cancel</button>
+										</div>
+									</form>
+								</div>
+
+									</div>
+					</div>
+					<div class="card-content">
+						<div class="col ">
+							<i class="material-icons left">thumb_up</i>
+							{{video.likeCount}}
+						</div>
+						<div class="col ">
+							<i class="material-icons left">thumb_down</i>
+							{{video.dislikeCount}}
+						</div>
+						<div class="col ">
+							<i class="material-icons left">visibility</i>
+							{{video.viewCount}}
+						</div>
+						<div class="col ">
+							<i class="material-icons left">favorite_border</i>
+							{{video.favoriteCount}}
+						</div>
+						<div class="col ">
+							<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
+						</div>
+						{{#if video.comments.length}}
+						comments({{video.comments.length}})<br>
+						{{/if}}
+
+						</div>
+						<div class="card-action">
+							{{video.title}}
+						</div>
+					</div>
+				</div>
+		<!-- <div class="col s6">
+			<div id="{{video.videoId}}" class="">
 			</div>
-			<div id="{{video.videoId}}" class="col left">
-			</div>
-				<div class="col left">
-					<i class="material-icons left">thumb_up</i>
-					{{video.likeCount}}
-				</div>
-				<div class="col left">
-					<i class="material-icons left">thumb_down</i>
-					{{video.dislikeCount}}
-				</div>
-				<div class="col left">
-					<i class="material-icons left">visibility</i>
-					{{video.viewCount}}
-				</div>
-				<div class="col left">
-					<i class="material-icons left">favorite_border</i>
-					{{video.favoriteCount}}
-				</div>
+
 				{{#if video.comments.length}}
 				comments({{video.comments.length}})<br>
 				{{/if}}
@@ -66,12 +120,16 @@
 
 									</div>
 				<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
-		</div>
+		</div> -->
 		{{/each}}
 
 
 
 	</div>
+<div class="row s12">
+
+</div>
+
     {{else}}
 			spinning
     {{/if}}
