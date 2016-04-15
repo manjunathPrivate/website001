@@ -1,5 +1,6 @@
 
 
+
 <template name="youtube">
 	{{#if Template.subscriptionsReady}}
 	<div class="row s12">
@@ -8,9 +9,8 @@
 			<div class="col bold">
 				{{video.title}}
 			</div>
-			<span id="{{video.videoId}}" class="col left">
-			</span>
-			<div class="row">
+			<div id="{{video.videoId}}" class="col left">
+			</div>
 				<div class="col left">
 					<i class="material-icons left">thumb_up</i>
 					{{video.likeCount}}
@@ -60,14 +60,12 @@
 										 </div>
 										 <button type="button" id="{{video.videoId}}" class="btn btn-info btn-sm row saveComment">Save</button>
 										 <button type="button" class="btn btn-info btn-sm row cancelComment">Cancel</button>
-										 <!-- <a align="center" id="{{video.videoId}}" class="waves-effect waves-light btn saveComment"><i class="material-icons left">cloud</i>Post</a> -->
 										</div>
 									</form>
 								</div>
 
 									</div>
 				<i class="material-icons prefix pointer addComment" id="{{video.videoId}}">note_add</i>
-			</div>
 		</div>
 		{{/each}}
 
