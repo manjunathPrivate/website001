@@ -47,13 +47,11 @@
 				</p>
 		<p class="footer-company-name">Data-Aux &copy; 2015</p>
 			</div>
-
 			<div class="footer-center">
-
 				<div>
 					<i class="fa fa-map-marker"></i>
 					<p>
-						<span>Data-Aux	Technologies Pvt. Ltd.</span>
+						<span>© 2015-2016 Data-Aux Technologies Pvt. Ltd., All rights reserved.</span>
 						 <br>
 	             #57 7th Main Bhavani <br>
 	             HBCS BSK 3rd stage next to Kotak Mahindra Bank<br>
@@ -61,34 +59,32 @@
 	             Outer Ring Road Bangalore 560085<br>
 					</p>
 				</div>
-
 				<div>
 					<i class="fa fa-phone"></i>
 					<p>8904394181</p>
 				</div>
-
 				<div>
 					<i class="fa fa-envelope"></i>
 					<p><a href="mailto:support@company.com">info@data-aux.com</a></p>
 				</div>
-
 			</div>
-
 			<div class="footer-right">
 
 				<p class="footer-company-about">
 					<span>About company</span>
-					DATA-AUX– incorporated in 2015 has rich experience in providing technology based web development solutions . Our solution based portfolio comprises of Web Development services, Mobile Development Services, Web & Graphic Design, Database Administration Services and Software Testing . We provide know-how for businesses and individuals to succeed in today’s Internet-enabled world. We are committed to building effective, timely systems and delivering solutions that create clear and unparalleled business value for our clients.
+					DATA-AUX– incorporated in 2015 has rich experience in providing technology based web development solutions . Our solution based portfolio comprises of Web Development services, Mobile Development Services, Web & Graphic Design, Database Administration Services and Software Testing
 				</p>
-
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
-				</div>
+				<div class="footer-social-icons">
+									<h4 class="_14">Follow us on</h4>
+									<ul class="social-icons">
+										<li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+										<li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+										<li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+										<li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+										<li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+										<li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div>
 
 			</div>
 
@@ -332,82 +328,10 @@
   </div>
 </template>
 
-<template name="testimonial">
-  <section class="testi-sec" id="testimonial">
-    <ul class="bxslider">
-      <!-- TODO: fix me incree height  -->
-      <li>
-    			<div class="cd-author" align="center">
-    				<img src="img/avatar-1.jpg" alt="Author image">
-    				<ul class="cd-author-info">
-    					<li>MyName</li>
-    					<li>CEO, AmberCreative</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-    				</ul>
-    			</div>
-        </li>
-      <li>
-    			<div class="cd-author" align="center">
-    				<img src="img/avatar-1.jpg" alt="Author image">
-    				<ul class="cd-author-info">
-    					<li>MyName</li>
-    					<li>CEO, AmberCreative</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-    				</ul>
-    			</div>
-        </li>
-      <li>
-    			<div class="cd-author" align="center">
-    				<img src="img/avatar-1.jpg" alt="Author image">
-    				<ul class="cd-author-info">
-    					<li>MyName</li>
-    					<li>CEO, AmberCreative</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-    				</ul>
-    			</div>
-        </li>
-    </ul>
-    </section>
-</template>
-
-<template name="footer">
-  <div class="footdiv grey-text text-lighten-3">
-    <div class="row without-margin-bottom top-row">
-      <div class="col s8">
-				<div class="row">
-					<div class="col s4">
-						<ul class="footer-ul">
-							<li>&nbsp;
-							</li>
-							<li>
-								<a href="{{$.DICT.homePage.footer.careers.link}}" class="tooltipped hover-dark" data-tooltip="{{$.DICT.homePage.footer.careers.tooltip}}">
-									{{$.DICT.homePage.footer.careers.text}}
-								</a>
-							</li>
-		        </ul>
-					</div>
-				</div>
-      </div>
-      <div class="col s4 relative full-height">
-				<a href="https://www.google.co.in/maps/place/Hebbal,+Bengaluru,+Karnataka+560024/@13.0346215,77.5806636,14z/data=!3m1!4b1!4m2!3m1!1s0x3bae17a295d80a47:0x1a3ccbf328b14759" target="_blank">
-	        <div class="address hover-dark">
-					Data-Aux	Technologies Pvt. Ltd. <br>
-             #57 7th Main Bhavani <br>
-             HBCS BSK 3rd stage next to Kotak Mahindra Bank<br>
-             Near Devegowda Paetrol Bunk<br>
-             Outer Ring Road Bangalore 560085<br>
-	        </div>
-				</a>
-      </div>
-    </div>
-		<div class="white-text footer-copyright">
-			© 2015-2016 Data-Aux Technologies Pvt. Ltd., All rights reserved.
-		</div>
-  </div>
-</template>
 
 
 <template name="homeTemplate">
+	{{#if Template.subscriptionsReady}}
 	<section class="header-sec" id="home" >
 			 {{> imageSlider}}
 	</section>
@@ -418,4 +342,7 @@
 	<section class="testi-sec" >
 			 {{> testimonial}}
 	</section>
+	{{else}}
+		{{> tLoader}}
+	{{/if}}
 </template>
