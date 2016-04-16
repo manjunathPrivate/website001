@@ -26,7 +26,6 @@
 												 <li><a href="/mob-dev">Mobile Devlopment</a></li>
 												 <li><a href="/bd-dev">Database Administration</a></li>
 												 <li><a href="/software-testing">Software Testing</a></li>
-												 <li><a href="/content-management">Content Management  Solutions</a></li>
 											 </ul>
 										 </li>
                      <li><a href="/paricipate">Attendend/Paricipate</a></li>
@@ -276,33 +275,54 @@
             </div>
             <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
                 <div data-p="144.50" style="display: none;">
-                  <div class="carousel-caption light left">
-                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
-                 </div>
-                    <img data-u="image" src="img/slider/email-dev.jpg" />
-                    <img data-u="thumb" src="img/slider/email-dev.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
 									<div class="carousel-caption light left">
-                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+										<div class="content">
+											<h1>
+												Mobile Devploment
+											</h1>
+
+										</div>
+                   <a href="/mob-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
                  </div>
                     <img data-u="image" src="img/slider/mobile-dev.jpg" />
                     <img data-u="thumb" src="img/slider/mobile-dev.jpg" />
                 </div>
                 <div data-p="144.50" style="display: none;">
 									<div class="carousel-caption light left">
-                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+										<div class="content">
+											<h1>
+												Database Administration
+											</h1>
+										</div>
+                   <a href="/db-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
                  </div>
                     <img data-u="image" src="img/slider/sequrity-dev.jpg" />
                     <img data-u="thumb" src="img/slider/sequrity-dev.jpg" />
                 </div>
                 <div data-p="144.50" style="display: none;">
 									<div class="carousel-caption light left">
-                   <a href="https://www.facebook.com/" class="btn btn-primary btn-white">Know More</a>
+										<div class="content">
+											<h1>
+												Web Devlopment
+											</h1>
+										</div>
+                   <a href="/web-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
                  </div>
                     <img data-u="image" src="img/slider/web-dev.jpg" />
                     <img data-u="thumb" src="img/slider/web-dev.jpg" />
                 </div>
+								<div data-p="144.50" style="display: none;">
+									<div class="carousel-caption light left">
+										<div class="content">
+											<h1>
+												Software Testing
+											</h1>
+										</div>
+									 <a href="" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
+								 </div>
+										<img data-u="image" src="img/slider/test-dev.jpg" />
+										<img data-u="thumb" src="img/slider/test-dev.jpg" />
+								</div>
             </div>
             <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
                 <div data-u="slides" style="cursor: default;">
@@ -328,10 +348,21 @@
   </div>
 </template>
 
+<template name="feedback">
+<div id="feedback" > <a><img src="images/feedback.png" /> </a>
+
+	<form class="feedbackform" action="index.html" method="post">
+		<input type="button" name="name" value="">
+		<input type="button" name="name" value="">
+		<input type="button" name="name" value="">
+	</form>
+ </div>
+</template>
 
 
 <template name="homeTemplate">
 	{{#if Template.subscriptionsReady}}
+	<!-- {{> feedback}} -->
 	<section class="header-sec" id="home" >
 			 {{> imageSlider}}
 	</section>
