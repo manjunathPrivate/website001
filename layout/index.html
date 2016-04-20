@@ -1,10 +1,13 @@
 <head>
   <title>Talks</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow9.js"></script>
+<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
 </head>
 
 <template name="mainNav">
-
   <div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
          <div class="container">
              <div class="navbar-header">
@@ -92,44 +95,49 @@
 </template>
 
 <template name="blogTemplate">
-  <br>
-  <br>
-  <br>
-  <div class="row viewport">
-    <h1>Cultural</h1>
-    {{#each video in videos.Cultural}}
-    <div id="{{video.videoId}}" >
-    </div>
-    {{/each}}
-  </div>
-  <div class="row viewport">
-    <h1>Enginericng</h1>
-    {{#each video in videos.Enginericng}}
-    <div id="{{video.videoId}}" >
-    </div>
-    {{/each}}
-  </div>
-  <div class="row viewport">
-    <h1>Medical</h1>
-    {{#each video in videos.Medical}}
-    <div id="{{video.videoId}}" >
-    </div>
-    {{/each}}
-  </div>
-  <div class="row viewport">
-    <h1>Technology</h1>
-    {{#each video in videos.Technology}}
-    <div id="{{video.videoId}}" >
-    </div>
-    {{/each}}
-  </div>
-  <div class="row viewport">
-    <h1>Law</h1>
-    {{#each video in videos.Law}}
-    <div id="{{video.videoId}}" >
-    </div>
-    {{/each}}
-  </div>
+	<div class="parallax-container">
+     <div class="parallax"><img src="img/event.jpg"></div>
+   </div>
+   <div class="section white">
+     <div style="margin-left:20px;" class="row container">
+       <h2 class="header">Events</h2>
+			 <div class="row viewport">
+ 		    <h1>Cultural</h1>
+ 		    {{#each video in videos.Cultural}}
+ 		    <div id="{{video.videoId}}" >
+ 		    </div>
+ 		    {{/each}}
+ 		  </div>
+ 		  <div class="row viewport">
+ 		    <h1>Enginericng</h1>
+ 		    {{#each video in videos.Enginericng}}
+ 		    <div id="{{video.videoId}}" >
+ 		    </div>
+ 		    {{/each}}
+ 		  </div>
+ 		  <div class="row viewport">
+ 		    <h1>Medical</h1>
+ 		    {{#each video in videos.Medical}}
+ 		    <div id="{{video.videoId}}" >
+ 		    </div>
+ 		    {{/each}}
+ 		  </div>
+ 		  <div class="row viewport">
+ 		    <h1>Technology</h1>
+ 		    {{#each video in videos.Technology}}
+ 		    <div id="{{video.videoId}}" >
+ 		    </div>
+ 		    {{/each}}
+ 		  </div>
+ 		  <div class="row viewport">
+ 		    <h1>Law</h1>
+ 		    {{#each video in videos.Law}}
+ 		    <div id="{{video.videoId}}" >
+ 		    </div>
+ 		    {{/each}}
+ 		  </div>
+     </div>
+   </div>
 </template>
 
 <template name="paricipateform">
@@ -363,6 +371,8 @@
 <template name="homeTemplate">
 	{{#if Template.subscriptionsReady}}
 	<!-- {{> feedback}} -->
+
+
 	<section class="header-sec" id="home" >
 			 {{> imageSlider}}
 	</section>

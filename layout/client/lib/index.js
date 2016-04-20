@@ -11,14 +11,6 @@ Template.mainNav.events({
 })
 
 
-Template.feedback.onRendered(function(){
-	$(".pull_feedback").toggle(function(){
-				$("#feedback").animate({left:"0px"});
-				return false;
-			},
-			function(){
-				$("#feedback").animate({left:"-362px"});
-				return false;
-			}
-		); //toggle
+Template.blogTemplate.onRendered(function(){
+$('.parallax').parallax();
 })
