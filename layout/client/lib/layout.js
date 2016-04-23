@@ -15,7 +15,7 @@ Template.homeTemplate.onRendered(function(){
 			];
 
 			var jssor_1_options = {
-				$AutoPlay: true,
+				// $AutoPlay: true,
 				$SlideDuration: 800,
 				$SlideEasing: $Jease$.$OutQuint,
 				$CaptionSliderOptions: {
