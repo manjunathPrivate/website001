@@ -3,7 +3,38 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow9.js"></script>
-<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+<style>
+		.jssorb05 {
+				position: absolute;
+		}
+		.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				background: url('img/b05.png') no-repeat;
+				overflow: hidden;
+				cursor: pointer;
+		}
+		.jssorb05 div { background-position: -7px -7px; }
+		.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+		.jssorb05 .av { background-position: -67px -7px; }
+		.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+		.jssora22l, .jssora22r {
+				display: block;
+				position: absolute;
+				width: 40px;
+				height: 58px;
+				cursor: pointer;
+				background: url('img/a22.png') center center no-repeat;
+				overflow: hidden;
+		}
+		.jssora22l { background-position: -10px -31px; }
+		.jssora22r { background-position: -70px -31px; }
+		.jssora22l:hover { background-position: -130px -31px; }
+		.jssora22r:hover { background-position: -190px -31px; }
+		.jssora22l.jssora22ldn { background-position: -250px -31px; }
+		.jssora22r.jssora22rdn { background-position: -310px -31px; }
+</style>
 
 </head>
 
@@ -274,79 +305,42 @@
 
 </template>
 <template name="imageSlider">
-  <section class="header-sec" id="home" >
-        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
-            <!-- Loading Screen -->
-            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-            </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
-                <div data-p="144.50" style="display: none;">
-									<div class="carousel-caption light left">
-										<div class="content">
-											<h1>
-												Mobile Devploment
-											</h1>
-
-										</div>
-                   <a href="/mob-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
-                 </div>
-                    <img data-u="image" src="img/slider/mobile-dev.jpg" />
-                    <img data-u="thumb" src="img/slider/mobile-dev.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-									<div class="carousel-caption light left">
-										<div class="content">
-											<h1>
-												Database Administration
-											</h1>
-										</div>
-                   <a href="/db-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
-                 </div>
-                    <img data-u="image" src="img/slider/sequrity-dev.jpg" />
-                    <img data-u="thumb" src="img/slider/sequrity-dev.jpg" />
-                </div>
-                <div data-p="144.50" style="display: none;">
-									<div class="carousel-caption light left">
-										<div class="content">
-											<h1>
-												Web Devlopment
-											</h1>
-										</div>
-                   <a href="/web-dev" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
-                 </div>
-                    <img data-u="image" src="img/slider/web-dev.jpg" />
-                    <img data-u="thumb" src="img/slider/web-dev.jpg" />
-                </div>
-								<div data-p="144.50" style="display: none;">
-									<div class="carousel-caption light left">
-										<div class="content">
-											<h1>
-												Software Testing
-											</h1>
-										</div>
-									 <a href="" class="btn btn-primary btn-white">Know More <i class="material-icons">trending_flat</i></a>
-								 </div>
-										<img data-u="image" src="img/slider/test-dev.jpg" />
-										<img data-u="thumb" src="img/slider/test-dev.jpg" />
-								</div>
-            </div>
-            <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
-                <div data-u="slides" style="cursor: default;">
-                    <div data-u="prototype" class="p">
-                        <div class="w">
-                            <div data-u="thumbnailtemplate" class="t"></div>
-                        </div>
-                        <div class="c"></div>
-                    </div>
-                </div>
-            </div>
-            <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
-            <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/Webdev.jpg" />
+                <div style="position: absolute; top: 40px; left: 30px; width: 480px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px;">Software De</div>
+                <div style="position: absolute; top: 300px; left: 30px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">Build your slider with anything, includes image, content, text, html, photo, picture
+								</div>
 
-  </section>
+            </div>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/Mobile.jpg" />
+            </div>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/Database.jpg" />
+            </div>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/Testing.png" />
+            </div>
+            <a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a>
+
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+    </div>
+
 </template>
 
 <template name="recentEvents">
@@ -356,28 +350,12 @@
   </div>
 </template>
 
-<template name="feedback">
-<div id="feedback" > <a><img src="images/feedback.png" /> </a>
-
-	<form class="feedbackform" action="index.html" method="post">
-		<input type="button" name="name" value="">
-		<input type="button" name="name" value="">
-		<input type="button" name="name" value="">
-	</form>
- </div>
-</template>
 
 
 <template name="homeTemplate">
 	{{#if Template.subscriptionsReady}}
-	<!-- {{> feedback}} -->
-
-
-	<section class="header-sec" id="home" >
 			 {{> imageSlider}}
-	</section>
-	<!--HEADER SECTION END-->
-	 <section class="features" id="features">
+ <section class="features" id="features">
 			 {{> recentEvents}}
 	</section>
 	<section class="testi-sec" >
